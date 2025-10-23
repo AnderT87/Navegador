@@ -33,7 +33,35 @@ public class Pagina {
         actual = url;
         adelante.clear();
         visitar.add(url);
-        System.out.println("Te encuentras en:"+url+"/n");
+        System.out.println("Te encuentras en:"+url);
+    }
+
+    public boolean navegarAdelante() {
+        if (adelante.isEmpty()) {
+            return false;
+        } else {
+            atras.push(actual);
+            actual = adelante.peek();
+            adelante.pop();
+            
+            System.out.println("---AVANZASTE---");
+            System.out.println("Te encuentras en:"+actual);
+            return true;
+        }
+
+    }
+
+    public boolean navegarAtras() {
+        if (atras.isEmpty()) {
+            return false;
+        } else {
+            adelante.push(actual);
+            actual = atras.peek();
+            atras.pop();
+            System.out.println("---RETOCEDISTE---");
+            System.out.println("Te encuentras en:"+actual);
+            return true;
+        }
     }
 
 }

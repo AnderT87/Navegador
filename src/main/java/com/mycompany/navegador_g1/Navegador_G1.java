@@ -12,6 +12,14 @@ public class Navegador_G1 {
 
     public static void main(String[] args) {
        
+        Pagina paginaUno = new Pagina("Espoch.com");
+        paginaUno.visitarPagnina("google.com");
+        paginaUno.visitarPagnina("youtubr.com");
+        paginaUno.visitarPagnina("facebook.com");
+        
+        paginaUno.navegarAtras();
+        paginaUno.navegarAtras();
+        paginaUno.navegarAdelante();
         
         
     }
